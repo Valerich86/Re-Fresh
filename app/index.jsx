@@ -19,9 +19,9 @@ export default function Index() {
   const checkDb = async () => {
     try {
       // await removeDb();
-      // await removeAllMonitoredData();
-      // await addTestMonitoredData();
       await checkExistenceDb();
+      await removeAllMonitoredData();
+      await addTestMonitoredData();
     } catch (error) {
       console.log(error);
     }

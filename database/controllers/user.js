@@ -120,13 +120,13 @@ export async function addTestMonitoredData () {
   const db = await SQLite.openDatabaseAsync(dbName);
   try{
     await db.runAsync(`
-      INSERT INTO monitored_data (date, weight, waist) VALUES  
-      ('2025-04-01', 76, 75),
-      ('2025-04-15', 74.4, 74),
-      ('2025-04-30', 73.1, 72),
-      ('2025-05-10', 74, 73),
-      ('2025-05-20', 73, 70),
-      ('2025-05-31', 71.5, 78)
+      INSERT INTO monitored_data (date, weight, belly) VALUES  
+      ('2025-04-01', 94, 90),
+      ('2025-04-15', 94.4, 90),
+      ('2025-04-30', 93.1, 89),
+      ('2025-05-10', 94, 90),
+      ('2025-05-20', 93, 88),
+      ('2025-05-31', 91.5, 87)
     `);
     console.log('Test data is added')
   } catch (error) {
